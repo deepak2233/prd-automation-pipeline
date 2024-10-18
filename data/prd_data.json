@@ -1,0 +1,42 @@
+{
+    "product_name": "Hivel Insight Dashboard",
+    "objectives": [
+        "Provide real-time visibility into software engineering KPIs such as cycle time, deployment frequency, and change failure rate.",
+        "Identify productivity bottlenecks and suggest actionable insights using AI-powered recommendations.",
+        "Automate daily standup reports and sprint reviews to save engineering teams time."
+    ],
+    "user_personas": [
+        "CTO: Needs a high-level overview of project health and team performance.",
+        "Engineering Manager: Tracks sprint progress, identifies bottlenecks, and plans future sprints.",
+        "Developer: Monitors individual progress and blockers with actionable insights."
+    ],
+    "functional_requirements": {
+        "KPI Dashboard Module": [
+            "Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR.",
+            "Supports historical trend visualization over 7, 30, and 90-day windows."
+        ],
+        "AI-based Insight Generator": [
+            "Highlights anomalies (e.g., spike in change failure rate).",
+            "Recommends action plans (e.g., optimize CI/CD pipeline)."
+        ],
+        "Sprint Progress Tracker": [
+            "Automatically generates sprint progress updates.",
+            "Tracks completed vs. pending stories for each sprint."
+        ],
+        "Team Comparison View": [
+            "Compares performance across multiple teams.",
+            "Identifies outliers in productivity."
+        ]
+    },
+    "non_functional_requirements": [
+        "Performance: Dashboard must load within 2 seconds for up to 1000 users.",
+        "Scalability: Handle future growth to 5000 users with minimal downtime.",
+        "Security: Must comply with GDPR and ensure data privacy."
+    ],
+    "constraints": [
+        "Data is fetched from GitHub, Jira, and Jenkins APIs.",
+        "System runs on AWS with automated nightly batch processing.",
+        "Only existing metrics will be supported for the MVP—no new metrics will be created."
+    ]
+}
+

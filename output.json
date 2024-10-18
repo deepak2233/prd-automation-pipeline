@@ -1,0 +1,52 @@
+{
+    "epics": [
+        "Epic: KPI Dashboard Module",
+        "Epic: AI-based Insight Generator",
+        "Epic: Sprint Progress Tracker",
+        "Epic: Team Comparison View"
+    ],
+    "user_stories": [
+        "As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.",
+        "As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.",
+        "As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.",
+        "As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.",
+        "As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.",
+        "As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.",
+        "As a user, I want Compares performance across multiple teams. so that I can improve productivity.",
+        "As a user, I want Identifies outliers in productivity. so that I can improve productivity."
+    ],
+    "assignments": [
+        [
+            "As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.",
+            "John"
+        ],
+        [
+            "As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.",
+            "Alex"
+        ],
+        [
+            "As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.",
+            "Rachel"
+        ],
+        [
+            "As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.",
+            "Sarah"
+        ],
+        [
+            "As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.",
+            "John"
+        ],
+        [
+            "As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.",
+            "Alex"
+        ],
+        [
+            "As a user, I want Compares performance across multiple teams. so that I can improve productivity.",
+            "Rachel"
+        ],
+        [
+            "As a user, I want Identifies outliers in productivity. so that I can improve productivity.",
+            "Sarah"
+        ]
+    ]
+}

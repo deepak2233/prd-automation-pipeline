@@ -1,0 +1,7 @@
+[
+    {"name": "John", "role": "Front-end Engineer", "skills": "React, Angular, Frontend"},
+    {"name": "Alex", "role": "Back-end Engineer", "skills": "Python, Django, Backend"},
+    {"name": "Rachel", "role": "Full-stack Engineer", "skills": "Node.js, MongoDB, Fullstack"},
+    {"name": "Sarah", "role": "ML Engineer", "skills": "TensorFlow, PyTorch, Machine Learning"}
+]
+
