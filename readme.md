@@ -1,9 +1,7 @@
 
 # PRD Automation Pipeline
 
-![PRD Automation Pipeline](assets/prd_pipeline_banner.png)
-
-### A fully automated solution for analyzing and breaking down Product Requirement Documents (PRDs) using AI/ML and NLP, with intelligent task assignment and workload balancing. Includes Docker containerization and CI/CD integration for streamlined deployment.
+A fully automated solution for analyzing and breaking down Product Requirement Documents (PRDs) using AI/ML and NLP, with intelligent task assignment and workload balancing. Includes streamlined deployment.
 
 ---
 
