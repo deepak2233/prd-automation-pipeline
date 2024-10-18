@@ -40,23 +40,6 @@ The project is designed for **agile teams** looking to streamline product planni
 
 ---
 
-## 📷 **Screenshots**
-
-Here are a few screenshots of the application in action:
-
-### **1. Uploading Files and Selecting Mode**
-
-![File Upload and Mode Selection](assets/app_upload_mode.png)
-
-### **2. Generated Epics and User Stories**
-
-![Epics and User Stories](assets/app_epics_stories.png)
-
-### **3. Task Assignment Results**
-
-![Task Assignment Results](assets/app_task_assignments.png)
-
----
 ## 🛠️ **Technologies**
 
 - **Python 3.10**
@@ -131,3 +114,18 @@ python3 pipeline.py --mode optimized --prd_file data/prd_data.json --engineers d
 }
 ```
 
+## 📷 **App Outputs**
+
+### **1. Uploading Files and Selecting Mode**
+
+![File Upload and Mode Selection](outputs/output_1.png)
+
+### **2. Generated Epics and User Stories**
+
+![Epics and User Stories](outputs/output_2.png)
+
+### **3. Task Assignment Results**
+
+![Task Assignment Results](outputs/output_3.png)
+
+---
