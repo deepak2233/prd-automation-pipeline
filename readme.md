@@ -85,6 +85,12 @@ This mode uses reinforcement learning for skill-based task assignment and worklo
 python3 pipeline.py --mode optimized --prd_file data/prd_data.json --engineers data/engineer_profile.json
 ```
 
+### 3. **Optimized Mode**
+This mode uses reinforcement learning for skill-based task assignment and workload balancing.
+```bash
+streamlit run app.py
+```
+
 ---
 
 ## 💻 **Usage**
