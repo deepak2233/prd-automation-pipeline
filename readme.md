@@ -14,6 +14,7 @@ A fully automated solution for analyzing and breaking down Product Requirement D
 5. [Screenshots](#screenshots)
 ---
 
+
 ## 📝 **Project Overview**
 
 The PRD Automation Pipeline is designed to automate the analysis and breakdown of Product Requirement Documents (PRDs). It extracts key sections from the PRD, generates epics and user stories, assigns tasks to engineers based on skills and workloads, and evaluates the pipeline's performance using various metrics.
@@ -126,12 +127,9 @@ This mode uses reinforcement learning for skill-based task assignment and worklo
 python3 pipeline.py --mode optimized --prd_file data/prd_data.json --engineers data/engineer_profile.json
 ```
 
-### 3. **Optimized Mode**
-This mode uses reinforcement learning for skill-based task assignment and workload balancing.
 ```bash
 streamlit run app.py
 ```
-
 ---
 
 ## 💻 **Usage**
@@ -158,6 +156,15 @@ streamlit run app.py
     }
 }
 ```
+---
+
+## **Live App**
+You can try out the PRD Automation Pipeline directly in your browser by visiting the following link:
+
+👉 [**PRD Automation Pipeline Streamlit App**](https://prd-automation-pipeline.streamlit.app/)
+This mode uses reinforcement learning for skill-based task assignment and workload balancing
+
+---
 
 ## 📷 **App Outputs**
 
