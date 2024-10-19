@@ -163,15 +163,19 @@ streamlit run app.py
 
 ### **1. Uploading Files and Selecting Mode**
 
-![File Upload and Mode Selection](outputs/output_1.png)
+![File Upload and Mode Selection](outputs/APP_OUTPUT_page-0001.jpg)
 
 ### **2. Generated Epics and User Stories**
 
-![Epics and User Stories](outputs/output_2.png)
+![Epics and User Stories](outputs/APP_OUTPUT_page-0002.jpg)
 
-### **3. Task Assignment Results**
+### **3. Evaluation Metrics Results**
 
-![Task Assignment Results](outputs/output_3.png)
+![Evaluation Metrics Results](outputs/APP_OUTPUT_page-0003.jpg)
+
+### **3. EDA Results**
+
+![EDA Results](outputs/APP_OUTPUT_page-0004.jpg)
 
 ---
 
