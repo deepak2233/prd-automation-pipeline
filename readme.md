@@ -8,33 +8,74 @@ A fully automated solution for analyzing and breaking down Product Requirement D
 ## 📖 **Table of Contents**
 
 1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Screenshots](#screenshots)
-4. [Technologies](#technologies)
-5. [Setup & Installation](#setup--installation)
-6. [Running the Application](#running-the-application)
-
+2. [Technologies](#technologies)
+3. [Setup & Installation](#setup--installation)
+4. [Running the Application](#running-the-application)
+5. [Screenshots](#screenshots)
 ---
 
 ## 📝 **Project Overview**
 
-The **PRD Automation Pipeline** automates the extraction of epics, user stories, and tasks from unstructured PRDs (Product Requirement Documents) using advanced NLP and machine learning techniques. The pipeline also assigns user stories to engineers based on their roles and skills, while balancing workload to optimize team performance.
+The PRD Automation Pipeline is designed to automate the analysis and breakdown of Product Requirement Documents (PRDs). It extracts key sections from the PRD, generates epics and user stories, assigns tasks to engineers based on skills and workloads, and evaluates the pipeline's performance using various metrics.
 
-The project is designed for **agile teams** looking to streamline product planning and backlog management through automated tools. The pipeline can be containerized using **Docker** and deployed through a **CI/CD pipeline** using GitHub Actions for continuous integration and delivery.
+The pipeline supports three modes:
+1. **Basic Mode**
+2. **Advanced Mode**
+3. **Optimized Mode**
 
----
+## How All Three Pipelines Work
+The PRD Automation Pipeline consists of three modes:
 
-## ✨ **Features**
+### 1. **Basic Mode**
+- **Techniques Used**:
+  - Simple regex-based extraction of PRD sections.
+  - Round-robin task assignment with basic workload balancing.
+- **Task Assignment Logic**:
+  - The pipeline extracts PRD sections (objectives, functional requirements, user personas).
+  - Epics and user stories are generated from functional requirements.
+  - Tasks are assigned to engineers in a round-robin manner while keeping workloads relatively balanced.
+- **Evaluation**:
+  - Evaluates workload variance, skill match score (basic matching), and other simple metrics.
+- **Use Case**: 
+  - Suitable for smaller teams and simpler PRDs where requirements are straightforward and uniform.
 
-- **Automated PRD Processing**: Analyzes PRD documents and extracts key information such as objectives, user personas, and functional requirements.
-- **Epic and User Story Generation**: Automatically breaks down functional requirements into epics and user stories.
-- **Task Assignment**: Intelligent task assignment based on engineers' skills, roles, and workload.
-- **Workload Balancing**: Uses advanced reinforcement learning algorithms to optimize workload distribution.
-- **Modes**:
-  - **Basic Mode**: Round-robin task assignment.
-  - **Advanced Mode**: Skill-based task assignment.
-  - **Optimized Mode**: Skill and workload balancing with reinforcement learning.
-- **Streamlit Web Interface**: Upload PRD and engineer profiles, choose the processing mode, and view/download results.
+### 2. **Advanced Mode**
+- **Techniques Used**:
+  - Uses a transformer model (e.g., SentenceTransformer) to perform semantic extraction of PRD sections.
+  - Assigns tasks based on semantic similarity between user stories and engineers’ skills.
+- **Task Assignment Logic**:
+  - Extracts PRD sections using transformer models to achieve better context understanding.
+  - Calculates cosine similarity between task embeddings and skill embeddings to find the best-matching engineer.
+  - Considers workload balancing by distributing tasks based on similarity scores adjusted for current workloads.
+- **Evaluation**:
+  - Uses advanced metrics like **Semantic Similarity Score**, **BLEU**, and **ROUGE Scores** to measure extraction quality.
+  - Evaluates **Skill Match Score** more precisely using semantic embeddings.
+- **Use Case**: 
+  - Suitable for medium-sized teams with more complex PRDs that require better context understanding and skill-based task matching.
+
+### 3. **Optimized Mode**
+- **Techniques Used**:
+  - Similar to the Advanced Mode but includes a knapsack optimization algorithm to maximize skill matching while keeping workloads balanced.
+  - Uses reinforcement learning-like strategies to refine task assignments over time.
+- **Task Assignment Logic**:
+  - Performs task assignment based on skill matching, but with optimization that considers both workload and skill simultaneously.
+  - Uses a Dynamic Programming-based Knapsack Algorithm to find the most optimal assignment that maximizes the skill match and minimizes workload variance.
+- **Evaluation**:
+  - Includes additional metrics such as **Gini Coefficient** to evaluate workload equality.
+  - Measures **Skill Match Score**, **BLEU**, **ROUGE**, and **semantic similarity** more comprehensively.
+- **Use Case**: 
+  - Suitable for large teams with complex PRDs where tasks need to be optimally balanced across multiple engineers based on skills and workloads.
+
+## Example of Evaluation Metrics
+The pipeline uses a variety of metrics to evaluate task assignments and section extraction:
+
+1. **Skill Match Score**: Measures the average cosine similarity between user stories and engineers' skills.
+2. **Workload Variance**: Measures the variance in the number of tasks assigned to engineers.
+3. **Gini Coefficient**: Evaluates how evenly tasks are distributed among engineers (lower is better).
+4. **BLEU Score**: Evaluates how well the extracted sections match with expected PRD sections.
+5. **ROUGE Score**: Measures recall of phrases in the extracted sections.
+6. **Semantic Similarity Score**: Evaluates how semantically similar the extracted sections are to expected sections.
+
 
 ---
 
@@ -133,3 +174,5 @@ streamlit run app.py
 ![Task Assignment Results](outputs/output_3.png)
 
 ---
+
+

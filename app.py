@@ -1,95 +1,80 @@
 import streamlit as st
-import pandas as pd
+from utils import generate_epics_and_stories, save_output, perform_eda, evaluate_assignments
+from models import BasicNLPModel, AdvancedNLPModel, ReinforcementLearningModel
+from optimization import optimize_workload_knapsack
 import json
-from io import StringIO
-from main import PRDPipeline
-import os
+import pandas as pd
 
-# Set up the Streamlit app title
-st.title("PRD Automation Pipeline")
+def run_app():
+    st.title("PRD Automation Pipeline")
+    st.write("Upload your PRD JSON file and Engineer profiles JSON file to process them into Epics, User Stories, and Task Assignments.")
 
-# Instructions for the user
-st.write("Upload your PRD JSON file and Engineer profiles JSON file to process them into Epics, User Stories, and Task Assignments.")
+    # File upload components
+    prd_file = st.file_uploader("Upload PRD JSON File", type=["json"])
+    engineer_file = st.file_uploader("Upload Engineer Profiles JSON File", type=["json"])
 
-# File uploader for PRD and Engineer Profiles
-uploaded_prd_file = st.file_uploader("Upload PRD JSON File", type="json")
-uploaded_engineer_file = st.file_uploader("Upload Engineer Profiles JSON File", type="json")
+    if prd_file and engineer_file:
+        prd_data = json.load(prd_file)
+        engineers = json.load(engineer_file)
 
-# Dropdown for mode selection (basic, advanced, optimized)
-mode = st.selectbox(
-    "Select the mode of the pipeline:",
-    ("basic", "advanced", "optimized")
-)
+        # Pipeline mode selection
+        mode = st.selectbox("Select the mode of the pipeline:", ["basic", "advanced", "optimized"])
 
-# Process the uploaded files
-if uploaded_prd_file and uploaded_engineer_file:
-    # Convert the uploaded PRD JSON file to a usable format
-    prd_data = json.load(uploaded_prd_file)
-    
-    # Convert the uploaded Engineer Profiles JSON file to a usable format
-    engineer_data = json.load(uploaded_engineer_file)
+        if st.button("Run Pipeline"):
+            st.info(f"Processing the PRD and Engineer Profiles in {mode} mode...")
 
-    # Write to temp files to simulate file paths
-    with open("uploaded_prd.json", "w") as f:
-        json.dump(prd_data, f)
-    
-    with open("uploaded_engineers.json", "w") as f:
-        json.dump(engineer_data, f)
+            # Initialize the model based on the selected mode
+            if mode == "basic":
+                nlp_model = BasicNLPModel()
+            elif mode == "advanced":
+                nlp_model = AdvancedNLPModel()
+            else:
+                nlp_model = ReinforcementLearningModel()
 
-    # Run the PRD Pipeline
-    st.write(f"Processing the PRD and Engineer Profiles in **{mode}** mode...")
+            # Extract PRD sections
+            sections = nlp_model.extract_sections(prd_data)
 
-    # Initialize and run the pipeline based on the selected mode
-    pipeline = PRDPipeline(mode=mode, engineer_profiles="uploaded_engineers.json")
-    epics, stories, assignments = pipeline.run(prd_file="uploaded_prd.json")
-    
-    # Display results
-    st.success("Processing complete!")
-    
-    # Show Epics
-    st.header("Generated Epics")
-    st.write(pd.DataFrame(epics, columns=["Epics"]))
+            # Generate epics and user stories
+            epics, user_stories = generate_epics_and_stories(sections)
 
-    # Show User Stories
-    st.header("Generated User Stories")
-    st.write(pd.DataFrame(stories, columns=["User Stories"]))
+            # Task assignment based on mode
+            if mode == 'optimized':
+                initial_assignments = nlp_model.assign_tasks(user_stories, engineers)
+                assignments = optimize_workload_knapsack(initial_assignments, engineers)
+            else:
+                assignments = nlp_model.assign_tasks(user_stories, engineers)
 
-    # Show Task Assignments
-    st.header("Task Assignments to Engineers")
-    df_assignments = pd.DataFrame(assignments, columns=["User Story", "Assigned Engineer"])
-    st.write(df_assignments)
+            # Display generated epics and user stories in tables
+            st.subheader("Generated Epics")
+            epics_df = pd.DataFrame(epics, columns=["Epics"])
+            st.dataframe(epics_df, height=200)
 
-    # Allow users to download the output as JSON and Excel
-    st.download_button(
-        label="Download Results as JSON",
-        data=json.dumps({
-            "epics": epics,
-            "user_stories": stories,
-            "assignments": assignments
-        }, indent=4),
-        file_name="output_results.json",
-        mime="application/json"
-    )
-    
-    # Save output to Excel and offer for download
-    excel_file = "output_results.xlsx"
-    df_epics = pd.DataFrame(epics, columns=["Epics"])
-    df_stories = pd.DataFrame(stories, columns=["User Stories"])
-    df_assignments = pd.DataFrame(assignments, columns=["User Story", "Assigned Engineer"])
+            st.subheader("Generated User Stories")
+            stories_df = pd.DataFrame(user_stories, columns=["User Stories"])
+            st.dataframe(stories_df, height=300)
 
-    with pd.ExcelWriter(excel_file, engine='xlsxwriter') as writer:
-        df_epics.to_excel(writer, sheet_name='Epics', index=False)
-        df_stories.to_excel(writer, sheet_name='User Stories', index=False)
-        df_assignments.to_excel(writer, sheet_name='Assignments', index=False)
+            st.subheader("Task Assignments")
+            assignments_df = pd.DataFrame(assignments, columns=["User Story", "Assigned Engineer"])
+            st.dataframe(assignments_df, height=300)
 
-    with open(excel_file, 'rb') as f:
-        st.download_button(
-            label="Download Results as Excel",
-            data=f,
-            file_name="output_results.xlsx",
-            mime="application/vnd.ms-excel"
-        )
+            # Provide download options for JSON and CSV outputs
+            json_output = json.dumps({'epics': epics, 'user_stories': user_stories, 'assignments': assignments}, indent=4)
+            csv_output = assignments_df.to_csv(index=False)
 
-else:
-    st.warning("Please upload both a PRD JSON file and an Engineer Profiles JSON file to continue.")
+            st.download_button("Download JSON", data=json_output, file_name='output.json', mime='application/json')
+            st.download_button("Download CSV", data=csv_output, file_name='output.csv', mime='text/csv')
 
+            # Evaluate task assignments
+            evaluation_results = evaluate_assignments(assignments, engineers, sections, prd_data)
+            st.subheader("Evaluation Metrics")
+            eval_df = pd.DataFrame(list(evaluation_results.items()), columns=['Metric', 'Value'])
+            st.bar_chart(eval_df.set_index('Metric'))
+
+            # Perform EDA and show images
+            st.subheader("Exploratory Data Analysis (EDA)")
+            perform_eda(prd_data, engineers)
+            st.image('eda_prd_overview.png', caption='PRD Overview')
+            st.image('eda_engineer_roles.png', caption='Engineer Roles Distribution')
+
+if __name__ == "__main__":
+    run_app()

@@ -1,179 +1,73 @@
-2024-10-18 19:25:17,337 ERROR:Error loading engineer profiles from data/engineer_profile.json: [Errno 2] No such file or directory: 'data/engineer_profile.json'
-2024-10-18 19:25:37,570 INFO:Successfully loaded engineer profiles from data/enineer_profile.json
-2024-10-18 19:25:37,570 INFO:Loading PRD data from JSON file...
-2024-10-18 19:25:37,571 INFO:Successfully loaded PRD data from data/prd_data.json
-2024-10-18 19:25:37,571 INFO:Initializing NLP model for basic mode...
-2024-10-18 19:25:37,571 INFO:Processing PRD for mode: basic
-2024-10-18 19:25:37,571 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:25:37,571 INFO:Performing EDA on PRD...
-2024-10-18 19:25:37,571 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:25:37,571 INFO:Number of Objectives: 3
-2024-10-18 19:25:37,571 INFO:Functional Areas: 4
-2024-10-18 19:25:37,779 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:25:37,779 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:25:37,779 INFO:Number of Engineers: 4
-2024-10-18 19:25:37,839 INFO:Saved EDA plot for engineer roles as eda_engineer_roles.png
-2024-10-18 19:25:37,839 INFO:Extracted sections: Objectives, Functional Requirements, User Personas
-2024-10-18 19:25:37,839 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:25:37,839 INFO:Assigning tasks in basic mode using round-robin assignment.
-2024-10-18 19:25:37,839 INFO:Assigned 8 tasks to engineers.
-2024-10-18 19:25:37,839 INFO:Saving output to files...
-2024-10-18 19:25:37,839 INFO:Output successfully saved to output.json
-2024-10-18 19:25:37,840 ERROR:Error saving output: No module named 'xlsxwriter'
-2024-10-18 19:25:59,302 INFO:Successfully loaded engineer profiles from data/enineer_profile.json
-2024-10-18 19:25:59,302 INFO:Loading PRD data from JSON file...
-2024-10-18 19:25:59,302 INFO:Successfully loaded PRD data from data/prd_data.json
-2024-10-18 19:25:59,302 INFO:Initializing NLP model for basic mode...
-2024-10-18 19:25:59,302 INFO:Processing PRD for mode: basic
-2024-10-18 19:25:59,302 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:25:59,302 INFO:Performing EDA on PRD...
-2024-10-18 19:25:59,302 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:25:59,302 INFO:Number of Objectives: 3
-2024-10-18 19:25:59,302 INFO:Functional Areas: 4
-2024-10-18 19:25:59,399 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:25:59,399 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:25:59,399 INFO:Number of Engineers: 4
-2024-10-18 19:25:59,455 INFO:Saved EDA plot for engineer roles as eda_engineer_roles.png
-2024-10-18 19:25:59,455 INFO:Extracted sections: Objectives, Functional Requirements, User Personas
-2024-10-18 19:25:59,455 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:25:59,455 INFO:Assigning tasks in basic mode using round-robin assignment.
-2024-10-18 19:25:59,455 INFO:Assigned 8 tasks to engineers.
-2024-10-18 19:25:59,455 INFO:Saving output to files...
-2024-10-18 19:25:59,455 INFO:Output successfully saved to output.json
-2024-10-18 19:25:59,481 INFO:Output successfully saved to output.xlsx
-2024-10-18 19:25:59,481 INFO:Pipeline execution complete.
-2024-10-18 19:25:59,481 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:25:59,481 INFO:Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'John'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Alex'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Rachel'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Sarah'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
-2024-10-18 19:29:04,431 INFO:Successfully loaded engineer profiles from data/enineer_profile.json
-2024-10-18 19:29:04,432 INFO:Loading PRD data from JSON file...
-2024-10-18 19:29:04,433 INFO:Successfully loaded PRD data from data/prd_data.json
-2024-10-18 19:29:04,433 INFO:Initializing NLP model for advanced mode...
-2024-10-18 19:29:06,535 INFO:Processing PRD for mode: advanced
-2024-10-18 19:29:06,536 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:29:06,536 INFO:Performing EDA on PRD...
-2024-10-18 19:29:06,536 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:29:06,536 INFO:Number of Objectives: 3
-2024-10-18 19:29:06,536 INFO:Functional Areas: 4
-2024-10-18 19:29:06,893 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:29:06,893 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:29:06,893 INFO:Number of Engineers: 4
-2024-10-18 19:29:06,977 INFO:Saved EDA plot for engineer roles as eda_engineer_roles.png
-2024-10-18 19:29:06,978 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:29:06,978 INFO:Assigning tasks in advanced mode.
-2024-10-18 19:29:06,978 INFO:Assigned 8 tasks to engineers.
-2024-10-18 19:29:06,978 INFO:Saving output to files...
-2024-10-18 19:29:06,978 INFO:Output successfully saved to output.json
-2024-10-18 19:29:07,083 INFO:Output successfully saved to output.xlsx
-2024-10-18 19:29:07,083 INFO:Pipeline execution complete.
-2024-10-18 19:29:07,083 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:29:07,083 INFO:Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'John'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Alex'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Rachel'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Sarah'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
-2024-10-18 19:38:24,552 INFO:Successfully loaded engineer profiles from uploaded_engineers.json
-2024-10-18 19:38:24,554 INFO:Loading PRD data from JSON file...
-2024-10-18 19:38:24,555 INFO:Successfully loaded PRD data from uploaded_prd.json
-2024-10-18 19:38:24,555 INFO:Initializing NLP model for basic mode...
-2024-10-18 19:38:24,555 INFO:Processing PRD for mode: basic
-2024-10-18 19:38:24,555 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:38:24,556 INFO:Performing EDA on PRD...
-2024-10-18 19:38:24,556 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:38:24,556 INFO:Number of Objectives: 3
-2024-10-18 19:38:24,556 INFO:Functional Areas: 4
-2024-10-18 19:38:24,650 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:38:24,650 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:38:24,650 INFO:Number of Engineers: 4
-2024-10-18 19:38:24,697 INFO:Saved EDA plot for engineer roles as eda_engineer_roles.png
-2024-10-18 19:38:24,697 INFO:Extracted sections: Objectives, Functional Requirements, User Personas
-2024-10-18 19:38:24,697 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:38:24,697 INFO:Assigning tasks in basic mode using round-robin assignment.
-2024-10-18 19:38:24,698 INFO:Assigned 8 tasks to engineers.
-2024-10-18 19:38:24,698 INFO:Saving output to files...
-2024-10-18 19:38:24,698 INFO:Output successfully saved to output.json
-2024-10-18 19:38:24,738 INFO:Output successfully saved to output.xlsx
-2024-10-18 19:38:24,738 INFO:Pipeline execution complete.
-2024-10-18 19:38:33,091 INFO:Successfully loaded engineer profiles from uploaded_engineers.json
-2024-10-18 19:38:33,092 INFO:Loading PRD data from JSON file...
-2024-10-18 19:38:33,093 INFO:Successfully loaded PRD data from uploaded_prd.json
-2024-10-18 19:38:33,093 INFO:Initializing NLP model for advanced mode...
-2024-10-18 19:38:35,475 INFO:Processing PRD for mode: advanced
-2024-10-18 19:38:35,475 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:38:35,476 INFO:Performing EDA on PRD...
-2024-10-18 19:38:35,476 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:38:35,476 INFO:Number of Objectives: 3
-2024-10-18 19:38:35,476 INFO:Functional Areas: 4
-2024-10-18 19:38:35,567 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:38:35,568 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:38:35,568 INFO:Number of Engineers: 4
-2024-10-18 19:38:35,684 INFO:Saved EDA plot for engineer roles as eda_engineer_roles.png
-2024-10-18 19:38:35,684 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:38:35,685 INFO:Assigning tasks in advanced mode.
-2024-10-18 19:38:35,685 INFO:Assigned 8 tasks to engineers.
-2024-10-18 19:38:35,685 INFO:Saving output to files...
-2024-10-18 19:38:35,687 INFO:Output successfully saved to output.json
-2024-10-18 19:38:35,710 INFO:Output successfully saved to output.xlsx
-2024-10-18 19:38:35,710 INFO:Pipeline execution complete.
-2024-10-18 19:38:40,349 INFO:Successfully loaded engineer profiles from uploaded_engineers.json
-2024-10-18 19:38:40,349 INFO:Loading PRD data from JSON file...
-2024-10-18 19:38:40,349 INFO:Successfully loaded PRD data from uploaded_prd.json
-2024-10-18 19:38:40,349 INFO:Initializing NLP model for optimized mode...
-2024-10-18 19:38:40,350 INFO:Load pretrained SentenceTransformer: all-MiniLM-L6-v2
-2024-10-18 19:38:43,981 INFO:Use pytorch device_name: cuda
-2024-10-18 19:38:49,168 INFO:Processing PRD for mode: optimized
-2024-10-18 19:38:49,169 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:38:49,169 INFO:Performing EDA on PRD...
-2024-10-18 19:38:49,169 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:38:49,169 INFO:Number of Objectives: 3
-2024-10-18 19:38:49,169 INFO:Functional Areas: 4
-2024-10-18 19:38:49,287 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:38:49,288 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:38:49,288 INFO:Number of Engineers: 4
-2024-10-18 19:38:49,346 INFO:Saved EDA plot for engineer roles as eda_engineer_roles.png
-2024-10-18 19:38:49,347 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:38:53,043 INFO:Optimizing engineer workload...
-2024-10-18 19:38:53,044 INFO:Optimized Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'Alex'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'John'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'John'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Rachel'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'Alex'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Rachel'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Alex'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'John')]
-2024-10-18 19:38:53,044 INFO:Saving output to files...
-2024-10-18 19:38:53,047 INFO:Output successfully saved to output.json
-2024-10-18 19:38:53,086 INFO:Output successfully saved to output.xlsx
-2024-10-18 19:38:53,086 INFO:Pipeline execution complete.
-2024-10-18 19:57:55,265 INFO:Successfully loaded engineer profiles from uploaded_engineers.json
-2024-10-18 19:57:55,266 INFO:Loading PRD data from JSON file...
-2024-10-18 19:57:55,266 INFO:Successfully loaded PRD data from uploaded_prd.json
-2024-10-18 19:57:55,266 INFO:Initializing NLP model for basic mode...
-2024-10-18 19:57:55,267 INFO:Processing PRD for mode: basic
-2024-10-18 19:57:55,267 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:57:55,267 INFO:Performing EDA on PRD...
-2024-10-18 19:57:55,267 ERROR:Error during EDA: 'list' object has no attribute 'get'
-2024-10-18 19:58:01,446 INFO:Successfully loaded engineer profiles from uploaded_engineers.json
-2024-10-18 19:58:01,447 INFO:Loading PRD data from JSON file...
-2024-10-18 19:58:01,447 INFO:Successfully loaded PRD data from uploaded_prd.json
-2024-10-18 19:58:01,448 INFO:Initializing NLP model for basic mode...
-2024-10-18 19:58:01,448 INFO:Processing PRD for mode: basic
-2024-10-18 19:58:01,448 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:58:01,448 INFO:Performing EDA on PRD...
-2024-10-18 19:58:01,448 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:58:01,449 INFO:Number of Objectives: 3
-2024-10-18 19:58:01,449 INFO:Functional Areas: 4
-2024-10-18 19:58:01,567 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:58:01,567 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:58:01,568 INFO:Number of Engineers: 6
-2024-10-18 19:58:01,568 ERROR:Error during EDA: string indices must be integers
-2024-10-18 19:58:05,647 INFO:Successfully loaded engineer profiles from uploaded_engineers.json
-2024-10-18 19:58:05,647 INFO:Loading PRD data from JSON file...
-2024-10-18 19:58:05,648 INFO:Successfully loaded PRD data from uploaded_prd.json
-2024-10-18 19:58:05,648 INFO:Initializing NLP model for basic mode...
-2024-10-18 19:58:05,648 INFO:Processing PRD for mode: basic
-2024-10-18 19:58:05,648 INFO:Performing EDA on PRD and engineer profiles...
-2024-10-18 19:58:05,648 INFO:Performing EDA on PRD...
-2024-10-18 19:58:05,649 INFO:Product Name: Hivel Insight Dashboard
-2024-10-18 19:58:05,649 INFO:Number of Objectives: 3
-2024-10-18 19:58:05,649 INFO:Functional Areas: 4
-2024-10-18 19:58:05,697 INFO:Saved EDA plot for objectives as eda_objectives.png
-2024-10-18 19:58:05,698 INFO:Performing EDA on Engineer Profiles...
-2024-10-18 19:58:05,698 INFO:Number of Engineers: 4
-2024-10-18 19:58:05,759 INFO:Saved EDA plot for engineer roles as eda_engineer_roles.png
-2024-10-18 19:58:05,759 INFO:Extracted sections: Objectives, Functional Requirements, User Personas
-2024-10-18 19:58:05,760 INFO:Generated 4 epics and 8 user stories.
-2024-10-18 19:58:05,760 INFO:Assigning tasks in basic mode using round-robin assignment.
-2024-10-18 19:58:05,760 INFO:Assigned 8 tasks to engineers.
-2024-10-18 19:58:05,760 INFO:Saving output to files...
-2024-10-18 19:58:05,761 INFO:Output successfully saved to output.json
-2024-10-18 19:58:05,863 INFO:Output successfully saved to output.xlsx
-2024-10-18 19:58:05,863 INFO:Pipeline execution complete.
+2024-10-19 08:52:38,109 - INFO - Use pytorch device_name: cpu
+2024-10-19 08:52:38,109 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 08:52:59,757 - INFO - Extracted sections: Objectives, Functional Requirements, User Personas
+2024-10-19 08:52:59,758 - INFO - Basic Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'John'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Alex'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Rachel'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Sarah'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 08:53:16,404 - INFO - Extracted sections: Objectives, Functional Requirements, User Personas
+2024-10-19 08:53:16,404 - INFO - Basic Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'John'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Alex'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Rachel'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Sarah'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 08:53:27,223 - INFO - Extracted sections: Objectives, Functional Requirements, User Personas
+2024-10-19 08:53:27,223 - INFO - Basic Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'John'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Alex'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Rachel'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Sarah'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 08:53:45,142 - INFO - Use pytorch device_name: cpu
+2024-10-19 08:53:45,142 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 08:55:23,744 - INFO - Use pytorch device_name: cpu
+2024-10-19 08:55:23,744 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 08:55:26,139 - INFO - Advanced Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'Alex'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Sarah'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Sarah'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Rachel'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'Alex'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Rachel'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Alex'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 08:55:26,167 - INFO - Evaluation Results: {'Precision': np.float64(0.0), 'Recall': np.float64(0.0), 'F1-Score': np.float64(0.0), 'Workload Variance': np.float64(1.5)}
+2024-10-19 08:55:26,167 - INFO - Performing EDA...
+2024-10-19 08:55:26,273 - INFO - Saved EDA plot as eda_prd_overview.png
+2024-10-19 08:55:26,363 - INFO - Saved EDA plot as eda_engineer_roles.png
+2024-10-19 08:55:37,492 - INFO - Extracted sections: Objectives, Functional Requirements, User Personas
+2024-10-19 08:55:37,492 - INFO - Basic Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'John'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Alex'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Rachel'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Sarah'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 08:55:37,519 - INFO - Evaluation Results: {'Precision': np.float64(0.0), 'Recall': np.float64(0.0), 'F1-Score': np.float64(0.0), 'Workload Variance': np.float64(0.0)}
+2024-10-19 08:55:37,519 - INFO - Performing EDA...
+2024-10-19 08:55:37,610 - INFO - Saved EDA plot as eda_prd_overview.png
+2024-10-19 08:55:37,689 - INFO - Saved EDA plot as eda_engineer_roles.png
+2024-10-19 08:55:47,209 - INFO - Use pytorch device_name: cpu
+2024-10-19 08:55:47,209 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 08:55:50,506 - INFO - Advanced Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'Alex'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Sarah'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Sarah'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Rachel'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'Alex'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Rachel'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Alex'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 08:55:50,506 - INFO - Optimized Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'Alex'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Sarah'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Sarah'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Rachel'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'Alex'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Rachel'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Alex'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 08:55:50,507 - INFO - Optimized Assignments (Knapsack DP): [('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John')]
+2024-10-19 08:55:50,535 - INFO - Evaluation Results: {'Precision': np.float64(0.0), 'Recall': np.float64(0.0), 'F1-Score': np.float64(0.0), 'Workload Variance': np.float64(0.0)}
+2024-10-19 08:55:50,535 - INFO - Performing EDA...
+2024-10-19 08:55:50,637 - INFO - Saved EDA plot as eda_prd_overview.png
+2024-10-19 08:55:50,725 - INFO - Saved EDA plot as eda_engineer_roles.png
+2024-10-19 09:16:35,186 - INFO - Extracted sections: Objectives, Functional Requirements, User Personas
+2024-10-19 09:16:35,187 - INFO - Basic Mode Task Assignments: [('As a user, I want Displays key metrics such as cycle time, deployment frequency, change failure rate, and MTTR. so that I can improve productivity.', 'John'), ('As a user, I want Supports historical trend visualization over 7, 30, and 90-day windows. so that I can improve productivity.', 'Alex'), ('As a user, I want Highlights anomalies (e.g., spike in change failure rate). so that I can improve productivity.', 'Rachel'), ('As a user, I want Recommends action plans (e.g., optimize CI/CD pipeline). so that I can improve productivity.', 'Sarah'), ('As a user, I want Automatically generates sprint progress updates. so that I can improve productivity.', 'John'), ('As a user, I want Tracks completed vs. pending stories for each sprint. so that I can improve productivity.', 'Alex'), ('As a user, I want Compares performance across multiple teams. so that I can improve productivity.', 'Rachel'), ('As a user, I want Identifies outliers in productivity. so that I can improve productivity.', 'Sarah')]
+2024-10-19 09:16:35,210 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:35,210 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:37,775 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:37,775 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:39,816 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:39,816 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:41,800 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:41,800 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:43,724 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:43,724 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:45,672 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:45,672 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:48,024 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:48,024 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:49,987 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:49,987 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:51,925 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:51,925 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:53,964 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:53,964 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:56,018 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:56,019 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:57,949 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:57,949 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:16:59,944 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:16:59,944 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:17:01,978 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:17:01,978 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:17:03,930 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:17:03,930 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:17:05,926 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:17:05,927 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:17:07,871 - INFO - Using default tokenizer.
+2024-10-19 09:17:07,875 - INFO - Use pytorch device_name: cpu
+2024-10-19 09:17:07,875 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2024-10-19 09:17:10,014 - INFO - Evaluation Results: {'Skill Match Score': np.float64(-0.003016863949596882), 'Workload Variance': np.float64(0.0), 'Gini Coefficient of Workload': 0.0, 'BLEU Score': np.float64(1.0), 'ROUGE Score': np.float64(1.0), 'Semantic Similarity Score': np.float64(1.0)}
+2024-10-19 09:17:10,014 - INFO - Performing EDA...
+2024-10-19 09:17:10,293 - INFO - Saved EDA plot as eda_prd_overview.png
+2024-10-19 09:17:10,375 - INFO - Saved EDA plot as eda_engineer_roles.png
